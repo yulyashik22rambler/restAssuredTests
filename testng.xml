@@ -1,0 +1,20 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite">
+	<parameter name="key"
+		value="fdc937d2e6965069fb3a5bd6849527a8" />
+	<test name="testByCounty">
+		<classes>
+			<class name="ru.rest_example.rest_test.RestTest">
+				<methods>
+					<parameter name="query" value="Moscow,ru" />
+					<include name="getWeatherFromOpenWeatherAPI"></include>
+					<parameter name="query" value="Moscow" />
+					<include name="getWeatherFromOpenWeatherAPI"></include>
+					<parameter name="query" value="Berlin" />
+					<include name="getWeatherFromOpenWeatherAPI"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite>
